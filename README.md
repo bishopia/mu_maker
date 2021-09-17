@@ -9,7 +9,7 @@ this repo converts tecan plate reader output from raw excel time series to treat
 1. at the terminal/command line, clone this repo into local directory of your choosing: `git clone https://github.com/bishopia/mu_maker.git`.
 2. add folder of input files into local clone. maker this folder contains both of the required input files listed above.
 3. open Rstudio
-4. If you haven't already, install renv (`install.packages(renv)`).
+4. If you haven't already, install renv: `install.packages(renv)`.
 5. Go to top right corner of Rstudio and click start new project environment. Choose existing directory and select the cloned directory you just downloaded in the first step.
 6. once the new project is loaded, run the following to load up the proper and contained dependency environment: `renv::restore()`. Click yes or y twice to get that set up.
 7. Confirm at the console that you are in the correct working directory: `getwd()`. You should be in the cloned repo and not in the subdirectory with your input files.
