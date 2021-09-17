@@ -17,7 +17,6 @@ library(zoo)
 #name of well translation datasheet: which well corresponds to which culture/strain/treatment
 well_map_dir <- "./test_data_input"
 well_map_filename <- "well_map.xlsx"
-well_map_path <- paste(well_map_dir, "/", well_map_filename, sep="")
 
 #path to plate reader excel files
 plate_reader_file_path <- "./test_data_input"
@@ -40,6 +39,9 @@ output_dir <- "./output"
 #make list of files
 files <- list.files(path=plate_reader_file_path, pattern="\\d.xlsx$")
 files
+
+#make well map path
+well_map_path <- paste(well_map_dir, "/", well_map_filename, sep="")
 
 #vector of well
 well_map <- read_excel(well_map_path)
