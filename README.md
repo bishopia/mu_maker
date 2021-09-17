@@ -1,5 +1,5 @@
 # mu_maker
-this repo converts tecan plate reader output from raw excel time series to treatment specific mus. ideally one would clone this repo locally, start a new Rstudio project using that cloned directory, load renv file to get the exact dependency environment i've used, and then run the script with your own set of raw files.
+this repo converts tecan plate reader output from raw excel time series to well specific mus. ideally one would clone this repo locally, start a new Rstudio project using that cloned directory, load renv file to get the exact dependency environment i've used, and then run the script with your own set of raw files.
 
 ## required inputs
 1. raw tecan excel files (see example in test_data_input/). these files should have a bunch of header data, then a line for wells followed by mean well RFU values then by well stdev values. Only the excel files you want to analyze should be in the folder and they should have the same name except for the last bit before the filename suffix, which should be the timepoint (again, see example in test_data_input/). 
