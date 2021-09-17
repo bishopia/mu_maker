@@ -29,6 +29,8 @@ moving_window_point_number <- 3
 #e.g. if "Well    A1    A2   A3    etc is in line 54, assign 54 as value here
 matrix_header_line <- 54
 
+#specify output dir
+output_dir <- "./output"
 
 
 ##########################################################
@@ -149,7 +151,7 @@ for (i in seq_along(ls)) {
 }
 
 #export growth rate estimate dataframe to xlsx
-write_xlsx(z_out, paste0("output/gr_estimates_k", k, ".xlsx"))
+write_xlsx(z_out, paste0(output_dir, "/gr_estimates_k", k, ".xlsx", sep=""))
 
 # create plot object
 plots_wLines <- cumulative_df %>%
@@ -162,7 +164,7 @@ plots_wLines <- cumulative_df %>%
   select(filename, plot)
 
 #create plot directory
-suppressWarnings(dir.create(paste0("output/plots_wLines_k", k)))
+suppressWarnings(dir.create(paste0(output_dir, "/plots_wLines_k", k, sep="")))
 
 #create plots
-# pwalk(plots_wLines, ggsave, path =  paste0("output/plots_wLines_k", k))
+pwalk(plots_wLines, ggsave, path =  paste0(output_dir, "/plots_wLines_k", k, sep=""))
